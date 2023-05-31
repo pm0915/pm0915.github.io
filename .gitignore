@@ -1,3 +1,4 @@
-.hugo_build.lock
 .idea
+.vscode
 .DS_Store
+.hugo_build.lock
