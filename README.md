@@ -1,41 +1,41 @@
-# 我的 Hugo 站点
+# Website
 
-这是我的 [Hugo 站点](https://www.coderclub.com.cn)，使用 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) 主题。 
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-## 安装 Hugo
+### Installation
 
-如果你还没有安装 Hugo，请参考官网 [Hugo 安装指南](https://gohugo.io/getting-started/installing/)。 
-
-## 本地运行
-
-在本地运行站点，请输入下面的命令：
-
-```bash
-git clone https://github.com/pm0915/pm0915.github.io.git
-cd pm0915.github.io
-hugo server
+```
+$ npm install
 ```
 
-然后在浏览器中访问 http://localhost:1313/ 就可以查看你的站点了。
+### Local Development
 
-构建生产文件，请输入下面的指令:
-
-```bash
-hugo
+```
+$ npm run start
 ```
 
-在项目根目录会生成 `public` 文件夹，里面就是构建好的静态文件。
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-## 部署站点
+### Build
 
-本站点已经部署在 [Netlify](https://www.netlify.com/) 上。你也可以根据需要选择合适的部署方式。
+```
+$ npm run build
+```
 
-## 配置
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-本站点的主题配置文件在 `config.yml` 文件中，你可以根据需要进行修改。
+### Deployment
 
-## 特别感谢
+Using SSH:
 
-* [PaperMod 主题](https://github.com/adityatelange/hugo-PaperMod)
-* [Hugo](https://gohugo.io/)
-* [Netlify](https://www.netlify.com/)
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
