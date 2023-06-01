@@ -9,7 +9,7 @@ const config = {
   title: 'Coder Club',
   favicon: 'img/favicon.ico',
 
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://www.coderclub.com.cn',
   baseUrl: '/',
 
   organizationName: 'pm0915',
