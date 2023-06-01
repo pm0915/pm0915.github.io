@@ -19,8 +19,8 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -57,6 +57,11 @@ const config = {
           {
             to: '/about',
             label: '关于',
+            position: 'right'
+          },
+          {
+            to: '/example',
+            label: '示例',
             position: 'right'
           },
           {
