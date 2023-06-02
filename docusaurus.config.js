@@ -1,10 +1,9 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+// Description: Docusaurus 配置文件
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const COPYRIGHT = 'Copyright © 2023 Min Pan, Inc. Built with Docusaurus.';
+const COPYRIGHT = 'Copyright © 2023 Leaf. Built with Docusaurus.';
 const ICP = `<a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备2023002394号-1</a>`;
 const BEIAN = `<img src="img/beian.png" alt="备案图标" />`;
 const GONGAN = `<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61011302001629" >陕公网安备 61011302001629号</a>`
@@ -33,7 +32,10 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: false,
+        docs: {
+          path: 'docs',
+          sidebarPath: require.resolve('./sidebars.js'),
+        },
         blog: {
           routeBasePath: "/",
           showReadingTime: true,
@@ -47,14 +49,71 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/logo.png',
+      algolia: {
+        appId: 'I3BD6VSFZC',
+        apiKey: '2058c8b679bc6e4dcdd35e3fe2fc909d',
+        indexName: 'coderclub-com',
+        contextualSearch: true,
+      },
       navbar: {
         title: 'Coder Club',
+        hideOnScroll: true,
         items: [
           {
             to: '/',
             label: '首页',
             position: 'right'
+          },
+          {
+            to: '/docs/',
+            label: '文档',
+            position: 'right',
+            items: [
+              {
+                to: '/docs/c++',
+                label: 'C++',
+              },
+              {
+                to: '/docs/css',
+                label: 'CSS',
+              },
+              {
+                to: '/docs/electron',
+                label: 'Electron',
+              },
+              {
+                to: '/docs/golang',
+                label: 'Golang',
+              },
+              {
+                to: '/docs/html',
+                label: 'HTML',
+              },
+              {
+                to: '/docs/javascript',
+                label: 'JavaScript',
+              },
+              {
+                to: '/docs/nodejs',
+                label: 'Node.js',
+              },
+              {
+                to: '/docs/typescript',
+                label: 'TypeScript',
+              },
+              {
+                to: '/docs/uni-app',
+                label: 'Uni-app',
+              },
+              {
+                to: '/docs/vue',
+                label: 'Vue',
+              },
+              {
+                to: '/docs/webrtc',
+                label: 'WebRTC',
+              },
+            ],
           },
           {
             to: '/about',
@@ -67,16 +126,42 @@ const config = {
             position: 'right'
           },
           {
-            href: 'https://github.com/pm0915/pm0915.github.io',
             label: 'GitHub',
             position: 'right',
+            href: 'https://github.com/pm0915/pm0915.github.io',
           },
         ],
       },
       footer: {
         links: [
           {
-            title: 'Community',
+            title: '导航',
+            items: [
+              {
+                to: '/',
+                label: '首页',
+                position: 'right'
+              },
+              {
+                to: '/docs/',
+                label: '文档',
+                position: 'right',
+
+              },
+              {
+                to: '/about',
+                label: '关于',
+                position: 'right'
+              },
+              {
+                to: '/example',
+                label: '示例',
+                position: 'right'
+              },
+            ],
+          },
+          {
+            title: '社区',
             items: [
               {
                 label: 'Stack Overflow',
@@ -90,15 +175,19 @@ const config = {
                 label: 'Twitter',
                 href: 'https://twitter.com/',
               },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
               {
                 label: 'GitHub',
                 href: 'https://github.com/pm0915/',
               },
+            ],
+          },
+          {
+            title: '友链',
+            items: [
+              {
+                label: 'Literal',
+                href: 'https://wiki.literalkernel.work',
+              }
             ],
           },
         ],
