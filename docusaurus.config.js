@@ -4,7 +4,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const COPYRIGHT = `Copyright © ${new Date().getFullYear()} Min Pan, Inc. Built with Docusaurus.`;
+const COPYRIGHT = 'Copyright © 2023 Min Pan, Inc. Built with Docusaurus.';
 const ICP = `<a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备2023002394号-1</a>`;
 const BEIAN = `<img src="img/beian.png" alt="备案图标" />`;
 const GONGAN = `<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61011302001629" >陕公网安备 61011302001629号</a>`
