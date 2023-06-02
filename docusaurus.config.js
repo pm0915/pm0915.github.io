@@ -4,6 +4,11 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const COPYRIGHT = `Copyright © ${new Date().getFullYear()} Min Pan, Inc. Built with Docusaurus.`;
+const ICP = `<a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备2023002394号-1</a>`;
+const BEIAN = `<img src="img/beian.png" alt="备案图标" />`;
+const GONGAN = `<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61011302001629" >陕公网安备 61011302001629号</a>`
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Coder Club',
@@ -35,9 +40,6 @@ const config = {
           readingTime: ({ content, frontMatter, defaultReadingTime }) =>
             defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
       }),
     ],
   ],
@@ -45,7 +47,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo.png',
       navbar: {
         title: 'Coder Club',
         items: [
@@ -72,7 +74,6 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         links: [
           {
             title: 'Community',
@@ -96,12 +97,12 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/pm0915/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Coder Club, Inc. Built with Docusaurus.`,
+        copyright: `<p>${COPYRIGHT}</p><div>${ICP}${BEIAN}${GONGAN}</div>`,
       },
       prism: {
         theme: lightCodeTheme,
