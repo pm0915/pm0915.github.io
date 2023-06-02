@@ -70,48 +70,16 @@ const config = {
             position: 'right',
             items: [
               {
-                to: '/docs/c++',
-                label: 'C++',
+                label: '前端',
+                to: '/docs/web/',
               },
               {
-                to: '/docs/css',
-                label: 'CSS',
+                label: '后端',
+                to: '/docs/backend/',
               },
               {
-                to: '/docs/electron',
-                label: 'Electron',
-              },
-              {
-                to: '/docs/golang',
-                label: 'Golang',
-              },
-              {
-                to: '/docs/html',
-                label: 'HTML',
-              },
-              {
-                to: '/docs/javascript',
-                label: 'JavaScript',
-              },
-              {
-                to: '/docs/nodejs',
-                label: 'Node.js',
-              },
-              {
-                to: '/docs/typescript',
-                label: 'TypeScript',
-              },
-              {
-                to: '/docs/uni-app',
-                label: 'Uni-app',
-              },
-              {
-                to: '/docs/vue',
-                label: 'Vue',
-              },
-              {
-                to: '/docs/webrtc',
                 label: 'WebRTC',
+                to: '/docs/webrtc/',
               },
             ],
           },
